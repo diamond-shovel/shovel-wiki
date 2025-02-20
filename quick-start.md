@@ -95,7 +95,7 @@ Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所�
 
 1. **创建资产组和负责实体：** 将相关资产分组，并指定负责实体以便管理。
 
-   <img src="./img/creat.jpg?raw=true" alt="shovel" style="width: 60%;">
+   <img src="./img/creat.jpg?raw=true" alt="shovel" style="width: 100%;">
 
 
    
@@ -104,13 +104,13 @@ Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所�
 
    
 
-   <img src="./img/strategy.jpg?raw=true" alt="shovel" style="width: 50%;">
+   <img src="./img/strategy.jpg?raw=true" alt="shovel" style="width: 60%;">
 
    
 
 3. **开始任务：** 选择策略即可开始任务，也可手动导入和管理资产。
 
-   <img src="./img/start.jpg?raw=true" alt="shovel" style="width: 60%;">
+   <img src="./img/start.jpg?raw=true" alt="shovel" style="width: 100%;">
 
    
 
@@ -118,5 +118,5 @@ Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所�
 
 4. **定时任务（可选）：** 在任务菜单中创建定时任务，实现自动化操作。
 
-   <img src="./img/time.jpg?raw=true" alt="shovel" style="width: 50%;">
+   <img src="./img/time.jpg?raw=true" alt="shovel" style="width: 100%;">
 

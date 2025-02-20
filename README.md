@@ -20,20 +20,18 @@
 [![Nmap](https://img.shields.io/badge/Nmap-FF6600?style=for-the-badge&logo=gnu&logoColor=white)](https://nmap.org/)
 [![httpx](https://img.shields.io/badge/httpx-00B894?style=for-the-badge&logo=curl&logoColor=white)](https://github.com/projectdiscovery/httpx)
 [![nuclei](https://img.shields.io/badge/nuclei-4B32C3?style=for-the-badge&logo=nuclio&logoColor=white)](https://nuclei.projectdiscovery.io/)
-  <p>
-    <sub>
-      Powered with ❤️ by
-      <a href="https://www.hscsec.cn">
-        <b>HSC Security</b>
-      </a>
-    </sub>
-  </p>
+
+
+Powered by [hscsec](https://www.hscsec.cn)
 </div>
 
 <img src="./img/shovel.jpg?raw=true" alt="shovel" style="width: 100%;">
 
 </div>
 
+⚠️ 免责声明
+
+此项目正在积极开发中。预计新版本会引入突破性变更。更新前请务必查看版本更改日志。
 
 
 
@@ -74,26 +72,19 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 | **nmapper**             | 根据任务中的Host信息，使用Nmap扫描器进行端口探测并识别服务               | `info-collecting`, `collector`, `network`, `nmap`, `port`, `discovery`, `CIDR` |
 | **fofa_mapper**         | 根据任务中的域名信息，使用FOFA进行信息收集                               | `info-collecting`, `collector`, `domain`, `FOFA`                     |
 | **http_port_visitor**   | 根据任务中的开放端口信息，进行相关Web服务的信息收集                      | `httpx`, `info-collecting`, `collector`, `ports`, `http`             |
-| **company_Investigator**| 根据任务中的公司/集团名进行ICP备案信息收集                               | `info-collecting`, `collector`, `company`, `enscan`, `unstable`      |
-| **domain_Seeker**       | 根据任务中的域名信息，进行子域名信息收集                                 | `info-collecting`, `collector`, `website`, `discovery`, `domain`, `DNS`, `amass` |
-| **nuclei_Reactor**      | 根据任务中的URL信息，使用Nuclei扫描器进行漏洞检测                        | `vulnerability`, `detection`, `nuclei`, `exploit`, `CVE`             |
+| **company_investigator**| 根据任务中的公司/集团名进行ICP备案信息收集                               | `info-collecting`, `collector`, `company`, `enscan`, `unstable`      |
+| **domain_seeker**       | 根据任务中的域名信息，进行子域名信息收集                                 | `info-collecting`, `collector`, `website`, `discovery`, `domain`, `DNS`, `amass` |
+| **nuclei_reactor**      | 根据任务中的URL信息，使用Nuclei扫描器进行漏洞检测                        | `vulnerability`, `detection`, `nuclei`, `exploit`, `CVE`             |
 
-* 插件仓库: 待完善
+* 更多社区插件: 插件商店建设中...
 
 
-## 🛠️ 插件开发指南（即将发布）
-
-我们正在编写详细的插件开发文档，包括：
-- **插件开发框架详解**：从零开始构建一个插件
-- **核心API参考手册**：了解Shovel提供的核心接口
-- **插件调试与测试**：如何高效调试和验证插件功能
-- **插件发布流程**：将你的插件贡献到官方或社区插件库
 
 
 ## 🌱 欢迎贡献插件
 
 我们鼓励开发者参与插件生态建设：
-1. **提交插件**：将你的插件代码提交到我们的[插件仓库](https://github.com/your-repo/shovel-plugins)
+1. **提交插件**：将你的插件代码提交到我们的插件市场
 2. **插件审核**：经过审核后，优质插件将被纳入官方插件库
 3. **社区奖励**：贡献者将获得专属荣誉标识和社区积分
 
@@ -101,8 +92,16 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 ## 📢 温馨提示
 
 - **插件编写指南**：详细的插件开发Wiki将在近期发布，敬请期待！
-- **插件反馈**：如果你对现有插件有任何建议或发现问题，欢迎提交[Issue](https://github.com/your-repo/shovel/issues)
-- **插件需求**：如果你有新的插件需求，欢迎在[讨论区](https://github.com/your-repo/shovel/discussions)提出
+- **插件反馈**：如果你对现有插件有任何建议或发现问题，欢迎提交[Issue](https://github.com/diamond-shovel/diamond-shovel/issues)
+
+## 💡 核心文档
+
+以下是 Shovel Core 的核心文档，主要面向插件开发者和需要深入了解 Shovel 内部机制的用户。
+**请注意，如果您是普通用户，建议使用[快速部署](./quick-start.md)，无需阅读以下文档。**
+
+*   [简易插件开发指南](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md)
+*   [命令行版本安装指南](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/install.md)
+*   [命令行调用手册](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/cmdline.md)
 
 ## 📕 项目结构
 

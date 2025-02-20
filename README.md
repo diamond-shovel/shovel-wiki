@@ -20,9 +20,11 @@
 [![Nmap](https://img.shields.io/badge/Nmap-FF6600?style=for-the-badge&logo=gnu&logoColor=white)](https://nmap.org/)
 [![httpx](https://img.shields.io/badge/httpx-00B894?style=for-the-badge&logo=curl&logoColor=white)](https://github.com/projectdiscovery/httpx)
 [![nuclei](https://img.shields.io/badge/nuclei-4B32C3?style=for-the-badge&logo=nuclio&logoColor=white)](https://nuclei.projectdiscovery.io/)
+[![GitHub Stars](https://img.shields.io/github/stars/diamond-shovel/diamond-shovel?style=for-the-badge&logo=github&logoColor=white)](https://github.com/diamond-shovel/diamond-shovel/)
 
 
 Powered by [hscsec](https://www.hscsec.cn)
+
 </div>
 
 <img src="./img/shovel.jpg?raw=true" alt="shovel" style="width: 100%;">
@@ -99,9 +101,9 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 以下是 Shovel Core 的核心文档，主要面向插件开发者和需要深入了解 Shovel 内部机制的用户。
 **请注意，如果您是普通用户，建议使用[快速部署](./quick-start.md)，无需阅读以下文档。**
 
-*   [简易插件开发指南](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md)
-*   [命令行版本安装指南](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/install.md)
-*   [命令行调用手册](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/cmdline.md)
+*   [简易插件开发指南](docs/plugin-dev.md)
+*   [命令行版本安装指南](docs/install.md)
+*   [命令行调用手册](docs/cmdline.md)
 
 ## 📕 项目结构
 
@@ -116,6 +118,12 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 - https://github.com/wgpsec/ENScan_GO
 - https://github.com/projectdiscovery/nuclei
 - https://github.com/antvis/L7
+
+## ⭐️ 支持我们
+
+如果 SHOVEL 让您的安全工作更高效，请给我们点亮小星星！这是对我们最大的鼓励~
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/diamond-shovel/diamond-shovel?style=social)](https://github.com/diamond-shovel/diamond-shovel)
 
 ---
 📌 法律声明：本工具仅限合法授权测试使用，开发者不对滥用行为负责<br> 

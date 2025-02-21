@@ -112,12 +112,20 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 <img src="./img/shovel-project-structure.svg" style="width:80%;" alt="项目结构图"/>
 
 
+### 关于前端 (`shovel-frontend`) 和中间层 (`shovel-intermediate-layer`) 代码
+
+Shovel 项目的核心功能集中在 `shovel_core` 中。用户可以通过编写和扩展 `shovel_core` 的插件来实现自定义的功能，无需修改前端或中间层代码。因此，我们目前选择开源 `shovel_core` 部分，并鼓励社区开发者贡献插件，共同构建 Shovel 生态。 未来，我们也会根据社区的需求和项目的发展情况，考虑逐步开源其他部分的代码。
+
+**我们承诺，Shovel 的现有功能将永久免费开放，不会对核心功能进行收费。**
+
 ## 🎉 鸣谢
 
 - https://github.com/owasp-amass/amass
 - https://github.com/wgpsec/ENScan_GO
 - https://github.com/projectdiscovery/nuclei
 - https://github.com/antvis/L7
+
+
 
 ## ⭐️ 支持我们
 

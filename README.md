@@ -109,7 +109,48 @@ curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
 
 项目由`shovel_core`、`shovel-intermediate-layer`、`shovel-frontend`三个子层构成，具体组成如下图所示
 
-<img src="./img/shovel-project-structure.svg" style="width:80%;" alt="项目结构图"/>
+```mermaid
+graph TB
+    subgraph Shovel Plugins
+        shovel-plugin1[shovel-plugin-1]
+        shovel-plugin2[shovel-plugin-2]
+        shovel-pluginN[shovel-plugin-N]
+    end
+
+    subgraph Shovel Cores
+        shovel-core1[shovel-core-1]
+        shovel-core2[shovel-core-2]
+        shovel-coreN[shovel-core-N]
+    end
+
+    subgraph Middleware
+        shovel-db[shovel-db]
+        other-middleware[其他中间件]
+    end
+
+    scheduler[scheduler]
+    intermediate[shovel-intermediate-layer]
+    frontend[shovel-frontend]
+    nginx[nginx]
+    workbench[shovel-workbench]
+
+    shovel-plugin1 --> shovel-core1
+    shovel-plugin2 --> shovel-core1
+    shovel-pluginN --> shovel-coreN
+
+    shovel-core1 --> scheduler
+    shovel-core2 --> scheduler
+    shovel-coreN --> scheduler
+
+    scheduler --> intermediate
+    shovel-db --> intermediate
+    other-middleware --> intermediate
+
+    intermediate --> nginx
+    frontend --> nginx
+
+    nginx --> workbench
+```
 
 
 ### 关于前端 (`shovel-frontend`) 和中间层 (`shovel-intermediate-layer`) 代码

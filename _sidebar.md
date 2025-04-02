@@ -3,6 +3,8 @@
 * [SHOVEL核心项目](https://github.com/diamond-shovel/diamond-shovel)
     * [README](https://github.com/diamond-shovel/diamond-shovel/blob/main/README.md)
     * [文档](https://github.com/diamond-shovel/diamond-shovel/tree/main/docs)
+        * [shovel-plugins](docs/shovel-plugins.md) 
+        * [shovel-intermediate-layer](docs/shovel-intermediate-layer.md)
         * [install](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/install.md)
         * [cmdline](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/cmdline.md)
         * [plugin-dev](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md)
@@ -10,6 +12,3 @@
     * [贡献者行为准则](https://github.com/diamond-shovel/diamond-shovel/blob/main/CODE_OF_CONDUCT.md)
     * [汇报安全问题](https://github.com/diamond-shovel/diamond-shovel/blob/main/SECURITY.md)
     * [LICENSE](https://github.com/diamond-shovel/diamond-shovel/blob/main/LICENSE.md)
-    * 文档
-        * [shovel-plugins](docs/shovel-plugins.md) 
-        * [shovel-intermediate-layer](docs/shovel-intermediate-layer.md)

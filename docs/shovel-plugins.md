@@ -2,6 +2,12 @@
 
 shovel-plugins系统有极高的灵活度和性能，可根据不同的input & output可以自动组合不同的流水线，采用异步架构，支持异步运行不同的**非阻塞插件**。
 
+## 作为用户，我需要做什么
+
+用户需要通过控制插件的开关以构建不同的流水线实现不同的功能。
+
+(此项目正在积极更新中，后续可能对此包装并优化)
+
 ## 插件工作流设计原理
 
 Shovel 采用**模块化流水线架构**，通过插件组合实现从资产发现到漏洞检测的完整生命周期。插件的输入和输出均放在`context`中进行上下文共享，每个插件接收上游输出作为输入，经过处理后传递给下游插件，形成可定制的工作链，官方插件集仅实现了基础的功能，若想增加自己的插件请查看文档 [plugin-dev.md](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md) [diamond-shovel](https://github.com/diamond-shovel/diamond-shovel)

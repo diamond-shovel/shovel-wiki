@@ -10,4 +10,6 @@
     * [贡献者行为准则](https://github.com/diamond-shovel/diamond-shovel/blob/main/CODE_OF_CONDUCT.md)
     * [汇报安全问题](https://github.com/diamond-shovel/diamond-shovel/blob/main/SECURITY.md)
     * [LICENSE](https://github.com/diamond-shovel/diamond-shovel/blob/main/LICENSE.md)
-
+    * 文档
+        * [shovel-plugins](docs/shovel-plugins.md) 
+        * [shovel-intermediate-layer](docs/shovel-intermediate-layer.md)

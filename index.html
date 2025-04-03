@@ -16,6 +16,12 @@
      :root {
        /* --theme-hue: 325; */
      }
+     .mermaid {
+      background: white;
+      padding: 20px;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
    </style>
 </head>
 <body>
@@ -24,6 +30,19 @@
    <script>
      // Docsify Configuration
      window.$docsify = {
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + code + '</div>'
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+    
   loadSidebar: true,
   subMaxLevel: 2, // 自动生成子侧边栏层级
   search: {
@@ -37,7 +56,26 @@
    <!-- Required -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-
+   <!-- mermaid -->
+   <script src="https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.min.js"></script>
+   <script>
+    // 初始化 Mermaid
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        darkMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
+        fontSize: '14px'
+      }
+    });
+    
+    // Docsify 渲染完成后回调
+    window.$docsify.afterEach = function(content) {
+      // 延迟执行确保 DOM 更新完成
+      setTimeout(mermaid.init, 10);
+      return content;
+    };
+  </script>
    <!-- Recommended -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>

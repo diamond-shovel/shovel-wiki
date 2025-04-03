@@ -1,12 +1,16 @@
 # Shovel 中间层
 
 - `shovel-intermediate-layer`后续可能更名为`shovel-master`、`shovel-core`后续可能更名为`shovel-slave`
+- `shovel-intermediate-layer` 起到**管理用户与数据库**、**调度shovel-core**、**对接用户侧**的功能
+- 项目结构请参考[Project Structure](https://diamond-shovel.github.io/shovel-wiki/#/?id=%f0%9f%93%95-%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84)
 
-## 用户侧功能
+# 用户侧核心组件
 
-- 处于安全考量，中间层的源代码和维护由开发团队进行闭源管理，所以中间层只在此文档中展示**用户所关注的功能(用户侧功能)**
+- 处于安全考量，中间层的源代码和维护由开发团队进行闭源管理，所以中间层只在此文档中展示**用户所关注的功能组件(用户侧功能)**
 
-### Task
+## Task(任务)
+
+![](../img/2025-04-03-14-34-09.png)
 
 任务系统是 Shovel 中间层的核心控制模块，负责管理 `shovel-cores` 的全生命周期：
 
@@ -16,7 +20,9 @@
 - **定时任务**：集成 Cron 表达式解析器，支持周期性任务调度（如每日凌晨全量扫描）
 - **依赖管理**：自动处理任务间的依赖关系，确保执行顺序符合业务逻辑
 
-### Strategies
+## Strategies(策略)
+
+![](../img/2025-04-03-14-38-07.png)
 
 策略模块定义了任务执行的业务逻辑输入：
 
@@ -26,7 +32,17 @@
 - **安全隔离**：策略配置与核心执行引擎解耦，通过沙箱机制确保安全性
 - **扩展规范**：具体实现参考 [Shovel Plugins 文档](docs/shovel-plugins.md)
 
-### AssetGroup
+## AssetsGroup(资产组)
+
+![](../img/![](../img/2025-04-03-14-39-22.png).png)
+
+```mermaid
+graph TB
+A(Assets Group) --> assets1
+A --> assets2
+A --> assets3
+A --> assets...
+```
 
 资产组模块实现严格的资产管理规范：
 
@@ -34,15 +50,24 @@
 - **权限边界**：通过资产组划分实现权限隔离（如部门级/项目级资产分组）
 - **资产结构保障**：系统禁止创建任何未绑定资产组的孤立资产(悬空资产)
 
-### Plugins
+## Plugins(插件)
+
+![](../img/2025-04-03-14-43-24.png)
 
 中间层的所有业务功能均由插件实现，具体请查看[shovel-plugin](docs/shovel-plugins.md)文档
 
-### Artifacts
+## Artifacts(工件)
+
+![](../img/2025-04-03-14-44-12.png)
 
 此工件系统为shovel内部的文件管理机制，所有的中间层的中间产物以及结果都会在这里暂存 / 永久存储，您可以在其中查询到历史的数据。
 
-### 配置系统
+
+## Config(配置)
+
+![](../img/2025-04-03-14-44-53.png)
+
+![](../img/2025-04-03-14-45-35.png)
 
 目前配置可以在策略配置中`手动设置`，也可以在配置管理中编辑`config.ini`文件
 
@@ -50,7 +75,7 @@
 
 * 优先级: `手动设置的参数` > `config.ini中的参数` > `空的参数`
 
-#### 例如
+### 举例
 ```ini
 # config.ini
 [setting]
@@ -76,14 +101,3 @@ param_2 = 0
 param_3 = 3
 param_4 = 
 ```
-
-
-## 项目选型
-
-### DataBase
-
-- PostgreSQL
-
-### API
-
-- FastAPI + Python

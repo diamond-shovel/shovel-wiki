@@ -129,31 +129,66 @@
                 }
             },
             hooks: {
-                mounted() {
-                    // 主题切换监听
-                    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                    const updateMermaidTheme = () => {
-                        mermaid.initialize({
-                            theme: mediaQuery.matches ? 'dark' : 'default',
-                            themeVariables: {
-                                darkMode: mediaQuery.matches,
-                                fontSize: '14px',
-                                primaryColor: '#D4A040',
-                                lineColor: mediaQuery.matches ? 'rgba(255,255,255,0.15)' : '#EEE'
-                            }
-                        });
-                    };
-
-                    mediaQuery.addListener(updateMermaidTheme);
-                    
-                    // 初始化渲染
-                    setTimeout(() => {
-                        updateMermaidTheme();
-                        mermaid.init();
-                    }, 500);
-                }
-            }
+    init() {
+      // 初始化Mermaid核心配置
+      mermaid.initialize({
+        startOnLoad: false, // 禁用自动初始化
+        securityLevel: 'loose',
+        theme: 'default',
+        themeVariables: {
+          primaryColor: '#D4A040'
         }
+      });
+    },
+
+    doneEach() {
+      document.body.clientHeight; 
+      // 深度清理DOM
+      const clearMermaidElements = () => {
+        document.querySelectorAll('.mermaid').forEach(el => {
+          // 移除已生成的SVG
+          if (el.querySelector('svg')) {
+            el.innerHTML = el.textContent; // 还原原始文本
+            el.removeAttribute('data-processed');
+          }
+        });
+      };
+
+      // 智能渲染机制
+      const renderMermaid = (attempt = 0) => {
+        try {
+          clearMermaidElements();
+          mermaid.init({
+            theme: window.matchMedia('(prefers-color-scheme: dark)').matches 
+              ? 'dark' 
+              : 'default'
+          }, '.mermaid');
+        } catch (e) {
+          if (attempt < 3) { // 最多重试3次
+            setTimeout(() => renderMermaid(attempt + 1), 200 * attempt);
+          }
+        }
+      };
+
+      // 分阶段触发
+      setTimeout(renderMermaid, 10);   // 立即尝试
+      setTimeout(renderMermaid, 300);  // 主内容加载后
+      setTimeout(renderMermaid, 1000); // 保障性重试
+    },
+
+    mounted() {
+      // 监听主题切换
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(() => {
+        this.doneEach();
+      });
+
+      // 监听路由变化（针对hash模式）
+      window.addEventListener('hashchange', () => {
+        setTimeout(this.doneEach, 10);
+      });
+    }
+  }
+}
     </script>
 
     <!-- 核心库 -->

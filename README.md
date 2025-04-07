@@ -31,7 +31,7 @@ Powered by [hscsec](https://www.hscsec.cn)
 
 </div>
 
-⚠️ 免责声明
+⚠️ 声明
 
 此项目正在积极开发中。预计新版本会引入突破性变更。更新前请务必查看版本更改日志。
 

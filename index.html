@@ -1,45 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-   <meta name="description" content="">
-   <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="SHOVEL">
+    <title>SHOVEL</title>
 
-   <!-- Themes (light + dark) -->
-   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <!-- 动态主题加载 -->
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
 
-   <!-- Custom Styles -->
-   <style>
-     :root {
-       /* --theme-hue: 325; */
-     }
-   </style>
+    <!-- 自定义样式 -->
+    <style>
+    :root {
+        /* 基础配色 */
+        --base-background-color: #0d1117;
+        --base-color: rgba(255, 255, 255, 0.85);
+        
+        /* 主题色 */
+        --theme-color: #D4A040;
+        --theme-hue: 39;
+        --theme-saturation: 65%;
+        --theme-lightness: 54%;
+
+        /* 侧边栏 */
+        --sidebar-background: #001529;
+        --sidebar-nav-link-color: rgba(255, 255, 255, 0.65);
+        --sidebar-nav-link-color--active: #D4A040;
+        --sidebar-nav-link-text-decoration--active: underline;
+        --sidebar-nav-link-text-decoration--hover: underline;
+
+        /* 代码块 */
+        --code-theme-background: #121212;
+        --code-theme-text: #FFFFFF;
+        --code-inline-background: rgba(255, 255, 255, 0.08);
+
+        /* 搜索框 */
+        --search-input-background-color: #121212;
+        --search-input-border-color: rgba(255, 255, 255, 0.15);
+        --search-result-item-background: #121212;
+
+        /* 卡片背景 */
+        --blockquote-background: #121212;
+        --notice-background: #121212;
+        --table-row-odd-background: rgba(255, 255, 255, 0.04);
+
+        /* 链接颜色 */
+        --link-color: #D4A040;
+        --link-color--hover: #ffc670;
+        
+        /* 按钮样式 */
+        --cover-button-background: rgba(212, 160, 64, 0.1);
+        --cover-button-border: 1px solid #D4A040;
+        --cover-button-primary-background: #D4A040;
+        
+        /* 文字对比度优化 */
+        --mono-shade3: rgba(255, 255, 255, 0.85);
+        --mono-shade2: rgba(255, 255, 255, 0.65);
+        --mono-tint2: rgba(255, 255, 255, 0.15);
+        
+        /* 代码字体 */
+        --code-font-family: 'Fira Code', Menlo, monospace;
+        
+        /* 圆角设置 */
+        --border-radius-m: 6px;
+        --code-block-border-radius: 8px;
+
+        /* Mermaid 图表变量 */
+        --mermaid-bg: white;
+        --mermaid-text: #333;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --base-background-color: #0d1117;
+            --mono-tint3: #1a1a1a;
+            --mermaid-bg: #121212;
+            --mermaid-text: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+    /* 侧边栏标题样式 */
+    .sidebar .sidebar-nav h2 strong {
+        border-left: 3px solid #D4A040;
+        padding-left: 10px;
+    }
+
+    /* 代码块特殊高亮 */
+    .token.keyword {
+        color: #D4A040 !important;
+    }
+
+    /* Mermaid 图表容器 */
+    .mermaid {
+        background: var(--mermaid-bg);
+        color: var(--mermaid-text);
+        padding: 20px;
+        margin: 1rem 0;
+        border-radius: 8px;
+        overflow: auto;
+        transition: background 0.3s ease;
+    }
+    </style>
 </head>
 <body>
-   <div id="app"></div>
+    <div id="app"></div>
 
-   <script>
-     // Docsify Configuration
-     window.$docsify = {
-  loadSidebar: true,
-  subMaxLevel: 2, // 自动生成子侧边栏层级
-  search: {
-    placeholder: '搜索文档...',
-    noData: '找不到结果!',
-    depth: 3
-  },
+    <script>
+        window.$docsify = {
+            name: 'SHOVEL',
+            repo: '',
+            loadSidebar: true,
+            subMaxLevel: 2,
+            search: {
+                placeholder: '搜索文档...',
+                noData: '找不到相关结果',
+                depth: 3
+            },
+            markdown: {
+                renderer: {
+                    code: function(code, lang) {
+                        if (lang === "mermaid") {
+                            return '<div class="mermaid">' + code + '</div>';
+                        }
+                        return this.origin.code.apply(this, arguments);
+                    }
+                }
+            },
+            hooks: {
+    init() {
+      // 初始化Mermaid核心配置
+      mermaid.initialize({
+        startOnLoad: false, // 禁用自动初始化
+        securityLevel: 'loose',
+        theme: 'default',
+        themeVariables: {
+          primaryColor: '#D4A040'
+        }
+      });
+    },
+
+    doneEach() {
+      document.body.clientHeight; 
+      // 深度清理DOM
+      const clearMermaidElements = () => {
+        document.querySelectorAll('.mermaid').forEach(el => {
+          // 移除已生成的SVG
+          if (el.querySelector('svg')) {
+            el.innerHTML = el.textContent; // 还原原始文本
+            el.removeAttribute('data-processed');
+          }
+        });
+      };
+
+      // 智能渲染机制
+      const renderMermaid = (attempt = 0) => {
+        try {
+          clearMermaidElements();
+          mermaid.init({
+            theme: window.matchMedia('(prefers-color-scheme: dark)').matches 
+              ? 'dark' 
+              : 'default'
+          }, '.mermaid');
+        } catch (e) {
+          if (attempt < 3) { // 最多重试3次
+            setTimeout(() => renderMermaid(attempt + 1), 200 * attempt);
+          }
+        }
+      };
+
+      // 分阶段触发
+      setTimeout(renderMermaid, 10);   // 立即尝试
+      setTimeout(renderMermaid, 300);  // 主内容加载后
+      setTimeout(renderMermaid, 1000); // 保障性重试
+    },
+
+    mounted() {
+      // 监听主题切换
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(() => {
+        this.doneEach();
+      });
+
+      // 监听路由变化（针对hash模式）
+      window.addEventListener('hashchange', () => {
+        setTimeout(this.doneEach, 10);
+      });
+    }
+  }
 }
-   </script>
+    </script>
 
-   <!-- Required -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <!-- 核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    
+    <!-- 插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
 
-   <!-- Recommended -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <!-- 可选字体 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fira-code@6.2/distr/fira_code.css">
 </body>
 </html>

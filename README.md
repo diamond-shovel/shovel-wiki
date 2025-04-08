@@ -54,11 +54,8 @@ Powered by [hscsec](https://www.hscsec.cn)
 ## ⚡ 快速部署使用
 
 ### 一键部署
-``` 
-curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
-#验证码需要关注"中龙技术"公众号回复"SHOVEL-ACTIVATE"获取
-```
 
+请参考[一键部署](./quick-start.md?id=一键部署流程)
 
 [![快速开始](https://img.shields.io/badge/-快速开始-orange?style=for-the-badge&logo=rocket&logoColor=white&padding=8)](./quick-start.md)
 

@@ -24,7 +24,7 @@ sudo lsof -i :80
 
 
 ```bash
-curl -o install.sh https://shovel.cyberspike.top/install.sh && bash install.sh
+curl -sSL https://shovel.cyberspike.top/gitinstall.sh -o install.sh && bash install.sh
 ```
 
 🔄 **安装过程将自动完成以下操作**：  
@@ -91,7 +91,7 @@ sudo systemctl stop xxx
 
 ## 正式开始您的shovel之旅
 
-Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所以让我们从新建资产组开始
+Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所以让我们从新建资产组开始，详情请见[docs](./docs/)
 
 1. **创建资产组和负责实体：** 将相关资产分组，并指定负责实体以便管理。
 

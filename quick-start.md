@@ -27,6 +27,17 @@ sudo lsof -i :80
 curl -sSL https://shovel.cyberspike.top/gitinstall.sh -o install.sh && bash install.sh
 ```
 
+**注意**: 国内部分地区脚本直连github仓库获取镜像可能会出现卡顿等网络问题，建议手动从[官方仓库](https://github.com/ansanyuan/shovel-workbench)下载最新[镜像包](https://github.com/ansanyuan/shovel-workbench/releases)并重命名为image.7z，放入脚本的同目录下
+
+
+![](img/2025-04-09-15-52-57.png)
+
+如图:
+
+![](img/2025-04-09-16-03-15.png)
+
+并运行安装脚本即可
+
 🔄 **安装过程将自动完成以下操作**：  
 
 1. 初始化Docker环境  

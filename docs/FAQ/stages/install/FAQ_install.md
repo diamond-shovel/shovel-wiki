@@ -9,7 +9,7 @@
     - 如果在Linux系统上，尝试使用`sudo`命令来提升权限。
 - **示例**：
     ```bash
-    curl -sSL https://shovel.cyberspike.top/gitinstall.sh -o install.sh && sudo bash install.sh
+    curl -sSL https://shovel.cyberspike.top/install.sh -o install.sh && sudo bash install.sh
     ```
 
 ## 解压失败

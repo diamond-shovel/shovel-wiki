@@ -45,3 +45,21 @@
     1. 停止所有Shovel相关的Docker容器。
     2. 删除所有Shovel相关的Docker镜像。
     3. 删除Shovel相关的Volumes。
+
+## 不能正常启动docker service
+- **问题描述**：在安装过程中，docker service不能正常启动，可能在安装时报错`Can not connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`.
+- **解决方案**：
+    - 此问题可能是由于Docker服务未正确安装或配置导致的。
+    - 尝试手动启动Docker服务，使用以下命令：
+    ```bash
+    sudo systemctl start docker
+    ```
+    - 如果仍然无法启动，请检查Docker的安装日志，查看是否有其他错误信息。
+    - 如果使用的是云服务器，请确保提供给您的云服务器不是基于Docker的虚拟机。
+    - 如果是基于Docker的虚拟机，请联系云服务提供商以获取支持。
+
+## 忘记密码
+- **问题描述**：在安装过程中，忘记了Shovel的登录密码。
+- **解决方案**：
+    - (version<=0.1.7)出于安全考量，Shovel不提供找回密码的功能，您需要停止服务后删除数据卷，并重新安装Shovel。
+    - 请注意，这将删除所有数据，包括用户信息和配置。

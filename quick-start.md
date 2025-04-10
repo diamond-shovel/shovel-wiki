@@ -24,7 +24,7 @@ sudo lsof -i :80
 
 
 ```bash
-curl -sSL https://shovel.cyberspike.top/gitinstall.sh -o install.sh && bash install.sh
+curl -sSL https://shovel.cyberspike.top/install.sh -o install.sh && bash install.sh
 ```
 
 **注意**: 国内部分地区脚本直连github仓库获取镜像可能会出现卡顿等网络问题，建议手动从[官方仓库](https://github.com/ansanyuan/shovel-workbench)下载最新[镜像包](https://github.com/ansanyuan/shovel-workbench/releases)并重命名为image.7z，放入脚本的同目录下

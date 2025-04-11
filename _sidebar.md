@@ -7,6 +7,8 @@
           * [stage]()
             * [install]()
               * [FAQ_install.md](docs/FAQ/stages/install/FAQ_install.md)
+            * [plugins]()
+              * [plugins.md](docs/FAQ/stages/plugins/plugins.md)
         * [shovel-plugins](docs/shovel-plugins.md) 
         * [shovel-intermediate-layer](docs/shovel-intermediate-layer.md)
         * [install](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/install.md)

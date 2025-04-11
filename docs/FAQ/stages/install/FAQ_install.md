@@ -23,13 +23,24 @@
     rm -rf image.7z
     ```
 
-## 网络问题
+## 网络问题导致的镜像下载失败
 - **问题描述**：在安装过程中，出现网络连接错误或下载速度缓慢。
 - **解决方案**：
     - 检查网络连接是否正常。
     - 如果在中国大陆地区，建议使用国内镜像源或VPN来加速下载。
     - 或查看quick-start中的手动下载镜像的正确流程，手动下载并放入脚本同目录下。
   
+## 网络问题导致的插件下载失败
+- **问题描述**：在安装过程中，出现网络连接错误或下载速度缓慢，导致插件下载失败。
+- **解决方案**：
+    - 检查网络连接是否正常。
+    - 如果在中国大陆地区，建议使用国内镜像源或VPN来加速下载。
+    - 或在[官方插件集](https://github.com/ansanyuan/shovel-default-plugins)中下载最新的默认插件集到`/var/lib/diamond-shovel/plugins`目录下（如果没有请手动创建，命令如下）。
+    - 请务必进行默认插件集的安装，否则您加载的Shovel-Workbench将没有任何功能。
+  ```bash
+    mkdir -p /var/lib/diamond-shovel/plugins
+  ```
+
 ## KeyError: 'ContainerConfig'
 - **问题描述**：在安装过程中，出现KeyError: 'ContainerConfig'的错误提示。
 - **解决方案**：

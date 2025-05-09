@@ -36,7 +36,7 @@ copyright: Copyright &copy; 2024 - 2025 diamond-shovel Team
 theme:
   name: material
   language: zh
-  custom_dir: shovel/overrides
+  #custom_dir: shovel/overrides
   features:
     - announce.dismiss
     - content.action.edit

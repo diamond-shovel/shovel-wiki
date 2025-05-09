@@ -1,22 +1,9 @@
 
-<div align="center">
-  <a href="https://github.com/diamond-shovel/diamond-shovel">
-    ![shovel-plugins](./img/shovel-plugin.png)
-  </a>
-  <h1>
-    <b>SHOVEL PLUGINS</b>
-  </h1>
-  
-  <h3>开放式安全插件生态库</h3>
 
+[![Shovel Logo](img/favicon.ico)](https://github.com/diamond-shovel/diamond-shovel)
+# SHOVEL PLUGINS
 
-<p align="center">
-    <a href="#-插件目录">📦 插件目录</a> •
-    <a href="#-贡献指南">🛠️ 贡献指南</a> •
-    <a href="#-开发文档">📚 开发文档</a> •
-    <a href="#-社区支持">💬 社区支持</a>
-</p>
-</div>
+### 开放式安全插件生态库
 
 ---
 
@@ -80,18 +67,12 @@ plugins/
 
 ---
 
-### 📚 开发文档
 
-待完善
-
-
-
-### 📜 许可协议
-待完善
 
 ### 💬 社区支持
-这里加点官方社区 讨论群啥的？
-待完善
+
+https://forum-shovel.hscsec.cn/
+
 ---
 
 📌 法律声明：本工具仅限合法授权测试使用，开发者不对滥用行为负责<br> 

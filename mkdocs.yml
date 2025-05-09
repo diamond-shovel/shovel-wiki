@@ -20,80 +20,66 @@
 
 # Project information
 site_name: SHOVEL
-site_url: https://squidfunk.github.io/mkdocs-material/
-site_author: Martin Donath
+site_url: https://squidfunk.github.io/
+site_author: hscsec
 site_description: >-
-  Write your documentation in Markdown and create a professional static site in
-  minutes – searchable, customizable, in 60+ languages, for all devices
+  Shovel's Wiki
 
 # Repository
 repo_name: diamond-shovel
 repo_url: https://github.com/diamond-shovel/diamond-shovel
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2025 Martin Donath
+copyright: Copyright &copy; 2024 - 2025 diamond-shovel Team
 
-# Configuration
+# Configuration·
 theme:
   name: material
-  custom_dir: material/overrides
+  language: zh
+  custom_dir: shovel/overrides
   features:
     - announce.dismiss
     - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/link
-        name: Switch to light mode
+        name: 切换到浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/toggle-switch
-        name: Switch to dark mode
+        name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
         icon: material/toggle-switch-off
-        name: Switch to system preference
+        name: 切换到系统主题
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: logo
-
+  favicon: assets/favicon.ico
+  logo: assets/favicon.ico
 # Plugins
 plugins:
-  - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
@@ -108,11 +94,17 @@ extra:
     deprecated: Deprecated
   analytics:
     provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+    property: G-KMFG578W80
+  generator: false
   social:
     - icon: fontawesome/brands/weixin
-      link: https://example.com/wechat  # 请替换为实际微信公众号链接
-
+      link: https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Mzg3Mzg1OTYyMQ==#wechat_redirect
+    - icon: fontawesome/brands/github
+      link: https://github.com/diamond-shovel/diamond-shovel
+  consent: 
+     title: Cookie consent 
+     description: >- 
+      我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。 如果你同意,你可以帮助我们让我们的网站更好
 # Extensions
 markdown_extensions:
   - abbr
@@ -168,8 +160,7 @@ not_in_nav: |
 
 # Page tree
 nav:
-  - 首页: index.md
-  - SHOVEL: Readme.md
+  - SHOVEL: index.md
   - 快速开始: quick-start.md
   - 核心文档:
     - 插件开发:
@@ -183,12 +174,10 @@ nav:
     - 安装: ./FAQ/stages/install/FAQ_install.md
     - 插件: ./FAQ/stages/plugins/plugins.md
   - 项目信息:
-    - 关于我们: about-us.md
+    - 项目主页: Readme.md
     - 贡献指南: https://github.com/diamond-shovel/diamond-shovel/blob/main/CONTRIBUTING.md
     - 行为准则: https://github.com/diamond-shovel/diamond-shovel/blob/main/CODE_OF_CONDUCT.md
     - 安全汇报: https://github.com/diamond-shovel/diamond-shovel/blob/main/SECURITY.md
     - 项目许可: https://github.com/diamond-shovel/diamond-shovel/blob/main/LICENSE.md
     - GitHub仓库: https://github.com/diamond-shovel/diamond-shovel
     - README文档: https://github.com/diamond-shovel/diamond-shovel/blob/main/README.md
-
-

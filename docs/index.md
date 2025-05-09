@@ -2,11 +2,7 @@
 ![SHOVEL](./assets/favicon.png)
   <h1><b>SHOVEL</b></h1>
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=ZCOOL+KuaiLe&pause=1000&color=F7F7F7&width=435&lines=%E8%A7%A3%E6%94%BE%E5%8F%8C%E6%89%8B+%E4%B8%8D%E5%81%9A%E5%90%97%E5%96%BD)
-
-
-
-
+![Typing SVG](https://readme-typing-svg.demolab.com?font=ZCOOL+KuaiLe&pause=1000&color=%23666&width=435&lines=%E8%A7%A3%E6%94%BE%E5%8F%8C%E6%89%8B+%E4%B8%8D%E5%81%9A%E5%90%97%E5%96%BD)
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)

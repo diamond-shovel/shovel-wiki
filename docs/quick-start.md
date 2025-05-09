@@ -64,8 +64,8 @@ curl -sSL https://shovel.cyberspike.top/install.sh -o install.sh && bash install
 ## ⚙️ 自定义配置（可选）
 
 ### 设置管理员密码
+![](./img/password.png)
 
-<img src="./img/password.png?raw=true" alt="shovel" style="width: 50%;">
 
 ---
 
@@ -86,6 +86,7 @@ curl -sSL https://shovel.cyberspike.top/install.sh -o install.sh && bash install
 ```bash
 docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
 ```
+
 ---
 
 ## 🚨 常见问题排查
@@ -105,23 +106,20 @@ sudo systemctl stop xxx
 Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所以让我们从新建资产组开始，详情请见文档
 
 1. **创建资产组和负责实体：** 将相关资产分组，并指定负责实体以便管理。
-
-   <img src="./img/creat.jpg?raw=true" alt="shovel" style="width: 100%;">
-
+![](./img/creat.jpg)
 
    
 
 2. **创建策略：** 选择目标资产组，并根据场景配置不同插件，可以批量导入，直接粘贴进多行ip或域名即可。
 
-   
+![](./img/strategy.jpg)
 
-   <img src="./img/strategy.jpg?raw=true" alt="shovel" style="width: 60%;">
 
    
 
 3. **开始任务：** 选择策略即可开始任务，也可手动导入和管理资产。
 
-   <img src="./img/start.jpg?raw=true" alt="shovel" style="width: 100%;">
+![](./img/start.jpg)
 
    
 
@@ -129,5 +127,4 @@ Shovel 创新地引入了资产组和策略，让工作更加高效便捷，所�
 
 4. **定时任务（可选）：** 在任务菜单中创建定时任务，实现自动化操作。
 
-   <img src="./img/time.jpg?raw=true" alt="shovel" style="width: 100%;">
-
+![](./img/time.jpg)

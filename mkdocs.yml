@@ -174,7 +174,7 @@ nav:
     - 安装: ./FAQ/stages/install/FAQ_install.md
     - 插件: ./FAQ/stages/plugins/plugins.md
   - 项目信息:
-    - 项目主页: README.md
+    - 项目主页: Readme.md
     - 贡献指南: https://github.com/diamond-shovel/diamond-shovel/blob/main/CONTRIBUTING.md
     - 行为准则: https://github.com/diamond-shovel/diamond-shovel/blob/main/CODE_OF_CONDUCT.md
     - 安全汇报: https://github.com/diamond-shovel/diamond-shovel/blob/main/SECURITY.md

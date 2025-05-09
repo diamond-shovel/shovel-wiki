@@ -1,8 +1,8 @@
 # Shovel 插件组合原理简述与使用指南
 
-![](../img/2025-04-03-14-46-35.png)
+![](./img/2025-04-03-14-46-35.png)
 
-shovel-plugins系统有极高的灵活度和性能，可根据不同的input & output可以自动组合不同的流水线，采用异步架构，支持异步运行不同的**非阻塞插件**。
+shovel-plugins系统有极高的灵活度和性能，可根据不同的input & output可以自动组合不同的流水线，采用异步架构，支持异步运行不同的 **非阻塞插件** 。
 
 ## 作为用户，我需要做什么
 
@@ -12,7 +12,7 @@ shovel-plugins系统有极高的灵活度和性能，可根据不同的input & o
 
 ## 插件工作流设计原理
 
-Shovel 采用**模块化流水线架构**，通过插件组合实现从资产发现到漏洞检测的完整生命周期。插件的输入和输出均放在`context`中进行上下文共享，每个插件接收上游输出作为输入，经过处理后传递给下游插件，形成可定制的工作链，官方插件集仅实现了基础的功能，若想增加自己的插件请查看文档 [plugin-dev.md](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md) [diamond-shovel](https://github.com/diamond-shovel/diamond-shovel)
+Shovel 采用 **模块化流水线架构** ，通过插件组合实现从资产发现到漏洞检测的完整生命周期。插件的输入和输出均放在`context`中进行上下文共享，每个插件接收上游输出作为输入，经过处理后传递给下游插件，形成可定制的工作链，官方插件集仅实现了基础的功能，若想增加自己的插件请查看文档 [plugin-dev.md](https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/plugin-dev.md) [diamond-shovel](https://github.com/diamond-shovel/diamond-shovel)
 
 ## 官方插件集 INPUT & OUTPUT
 
@@ -29,7 +29,7 @@ URLList -> `fingerprinter` -> 带指纹识别的WEBList
 开放端口List -> `http_port_visitor` -> WEBList
 
 WEBList -> `nuclei_reactor` -> VulnList
-
+   
 ## 结果持久化机制
 
 1. **数据库写入**：
@@ -37,7 +37,7 @@ WEBList -> `nuclei_reactor` -> VulnList
 2. **中间产物保留**：
 所有插件的原始输出（如子域名列表、端口扫描结果）均会完整保存，支持：
    - 单次任务结果导出
-   - 历史数据回溯分析(可在**工件**系统中找到对应的json原始数据以及导出过的表格数据)
+   - 历史数据回溯分析(可在 **工件** 系统中找到对应的json原始数据以及导出过的表格数据)
 
 ## 典型应用场景（举例）
 
@@ -45,7 +45,7 @@ WEBList -> `nuclei_reactor` -> VulnList
 
 ### 场景1：从公司名到漏洞检测
 
-![](../img/2025-04-03-14-49-00.png)
+![](./img/2025-04-03-14-49-00.png)
 
 开启: `company_investigator` `domain_seeker` `fofa_mapper` `nmapper` `fingerprinter` `http_visitor` `nuclei_reactor`
 
@@ -65,7 +65,7 @@ I --> J[漏洞报告]
 
 ### 场景2：直接域名输入
 
-![](../img/2025-04-03-14-50-31.png)
+![](./img/2025-04-03-14-50-31.png)
 
 开启: `domain_seeker` `fofa_mapper` `nmapper` `fingerprinter` `http_visitor` `nuclei_reactor`
 
@@ -82,7 +82,7 @@ H --> I(nuclei_reactor)
 
 ### 场景3：IP地址快速检测
 
-![](../img/2025-04-03-14-51-07.png)
+![](./img/2025-04-03-14-51-07.png)
 
 开启: `nmapper` `http_visitor` `nuclei_reactor`
 

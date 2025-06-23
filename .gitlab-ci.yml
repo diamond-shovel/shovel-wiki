@@ -1,0 +1,29 @@
+stages:
+  - deploy
+deploy_to_test_env:
+  stage: deploy
+  image: python:3.9
+  tags:
+    - docker
+  script:
+    - export PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
+    - pip install mkdocs mkdocs-material mkdocs-minify-plugin
+    - pkill -f "mkdocs" || true # 结束上一次的 mkdocs 服务
+    - mkdocs serve -a 0.0.0.0:9999 &
+    - sleep 5 # 等待服务启动
+  rules:
+    - if: '$CI_COMMIT_BRANCH != "main"'
+      when: always
+
+deploy_to_prod_env:
+  stage: deploy
+  image: python:3.9
+  tags:
+    - docker
+  script:
+    - export PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
+    - pip install mkdocs mkdocs-material mkdocs-minify-plugin
+    - mkdocs gh-deploy # 自动推送，这步请勿随意执行，直接会推送到生产环境
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: always

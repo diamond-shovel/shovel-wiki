@@ -162,7 +162,7 @@ not_in_nav: |
 nav:
   - SHOVEL: index.md
   - 快速开始: quick-start.md
-  - 核心文档:
+  - 入门:
     - 插件开发:
       - 基础插件: shovel-plugins.md
       - 中间件层: shovel-intermediate-layer.md
@@ -170,6 +170,13 @@ nav:
     - 使用指南:
       - 安装指南: https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/install.md
       - 命令行使用: https://github.com/diamond-shovel/diamond-shovel/blob/main/docs/cmdline.md
+  - 概念:
+    - 概述:
+      - 资产: Concepts/Assets.md
+      - 资产组:
+      - 策略:
+      - 任务:
+      - 节点:
   - FAQ:
     - 安装: ./FAQ/stages/install/FAQ_install.md
     - 插件: ./FAQ/stages/plugins/plugins.md

@@ -173,7 +173,7 @@ nav:
   - 概念:
     - 概述:
       - 资产: Concepts/Assets.md
-      - 资产组:
+      - 资产组:Concepts/AssetGroup.md
       - 策略:
       - 任务:
       - 节点:

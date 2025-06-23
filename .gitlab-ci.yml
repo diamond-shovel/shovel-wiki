@@ -8,9 +8,11 @@ deploy_to_test_env:
   script:
     - export PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin
-    - pkill -f "mkdocs" || true # 结束上一次的 mkdocs 服务
-    - mkdocs serve -a 0.0.0.0:9999 &
-    - sleep 5 # 等待服务启动
+    - mkdocs build
+  artifacts:
+    paths:
+      - site
+    expire_in: 1 week
   rules:
     - if: '$CI_COMMIT_BRANCH != "main"'
       when: always

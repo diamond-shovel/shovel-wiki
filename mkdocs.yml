@@ -175,7 +175,7 @@ nav:
       - 资产: Concepts/Assets.md
       - 资产组: Concepts/AssetGroup.md
       - 策略: Concepts/Strategy.md
-      - 任务:
+      - 任务: Concepts/Task.md
       - 节点:
   - FAQ:
     - 安装: ./FAQ/stages/install/FAQ_install.md

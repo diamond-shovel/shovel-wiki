@@ -9,6 +9,7 @@ deploy_to_test_env:
     - export PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
     - pip install mkdocs mkdocs-material mkdocs-minify-plugin
     - mkdocs build
+    # mkdocs serve -a 0.0.0.0:port 即可改为自动部署到测试环境，但是需要在docker中穿出对应的端口
   artifacts:
     paths:
       - site

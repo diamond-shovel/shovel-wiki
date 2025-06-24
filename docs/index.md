@@ -178,6 +178,10 @@ Shovel 项目的核心功能集中在 `shovel_core` 中。用户可以通过编�
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/diamond-shovel/diamond-shovel?style=social)](https://github.com/diamond-shovel/diamond-shovel)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=diamond-shovel/diamond-shovel&type=Date)](https://www.star-history.com/#diamond-shovel/diamond-shovel&Date)
+
 ---
 📌 法律声明：本工具仅限合法授权测试使用，开发者不对滥用行为负责<br> 
 📧 商务合作：shovel@hscsec.cn | 🌐 官网：https://www.hscsec.cn

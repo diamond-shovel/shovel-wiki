@@ -29,7 +29,9 @@ Powered by [hscsec](https://www.hscsec.cn)
 
 如果您觉得项目对您有帮助，请给我们的项目一个[鼓励的星星⭐️](https://github.com/diamond-shovel/diamond-shovel)！
 
+## Star History
 
+[![Star History Chart](https://api.star-history.com/svg?repos=diamond-shovel/diamond-shovel&type=Date)](https://www.star-history.com/#diamond-shovel/diamond-shovel&Date)
 
 ## 🔍 重新定义企业资产管理范式
 
@@ -178,9 +180,6 @@ Shovel 项目的核心功能集中在 `shovel_core` 中。用户可以通过编�
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/diamond-shovel/diamond-shovel?style=social)](https://github.com/diamond-shovel/diamond-shovel)
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=diamond-shovel/diamond-shovel&type=Date)](https://www.star-history.com/#diamond-shovel/diamond-shovel&Date)
 
 ---
 📌 法律声明：本工具仅限合法授权测试使用，开发者不对滥用行为负责<br> 

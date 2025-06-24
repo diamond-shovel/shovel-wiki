@@ -178,6 +178,7 @@ nav:
       - 任务: Concepts/Task.md
       - 节点: Concepts/Slave.md
       - 工件: Concepts/Artifact.md
+      - 插件: Concepts/Plugin.md
   - FAQ:
     - 安装: ./FAQ/stages/install/FAQ_install.md
     - 插件: ./FAQ/stages/plugins/plugins.md

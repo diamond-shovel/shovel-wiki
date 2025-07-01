@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nginx:
-    image: gitlab.cyberspike.top:5050/docker/nginx
+    image: gitlab.cyberspike.top:5050/docker/nginx:1.16.1
     container_name: nginx
     ports:
       - "80:80"

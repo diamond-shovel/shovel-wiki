@@ -20,11 +20,11 @@ deploy_to_test_env:
     - if: '$CI_COMMIT_BRANCH != "main"'
       when: always
 
-build_docker:
+test_docker:
   stage: test
-  image: docker:dind
+  image: gitlab.cyberspike.top:5050/docker/docker:dind
   services:
-    - name: docker:dind
+    - name: gitlab.cyberspike.top:5050/docker/docker:dind
       alias: docker
   variables:
     DOCKER_HOST: tcp://docker:2375

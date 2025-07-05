@@ -1,7 +1,9 @@
 stages:
+  - build
+  - test
   - deploy
 deploy_to_test_env:
-  stage: deploy
+  stage: build
   image: python:3.9
   tags:
     - docker
@@ -17,6 +19,22 @@ deploy_to_test_env:
   rules:
     - if: '$CI_COMMIT_BRANCH != "main"'
       when: always
+
+test_docker:
+  stage: test
+  image: gitlab.cyberspike.top:5050/docker/docker:dind
+  services:
+    - name: gitlab.cyberspike.top:5050/docker/docker:dind
+      alias: docker
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker compose up
+  tags:
+    - docker
 
 deploy_to_prod_env:
   stage: deploy

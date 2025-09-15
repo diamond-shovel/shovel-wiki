@@ -29,7 +29,9 @@ Powered by [hscsec](https://www.hscsec.cn)
 
 如果您觉得项目对您有帮助，请给我们的项目一个[鼓励的星星⭐️](https://github.com/diamond-shovel/diamond-shovel)！
 
+## Star History
 
+[![Star History Chart](https://api.star-history.com/svg?repos=diamond-shovel/diamond-shovel&type=Date)](https://www.star-history.com/#diamond-shovel/diamond-shovel&Date)
 
 ## 🔍 重新定义企业资产管理范式
 
@@ -51,7 +53,6 @@ Powered by [hscsec](https://www.hscsec.cn)
 
 请参考[一键部署](./quick-start.md?id=一键部署流程)
 
-[![快速开始](https://img.shields.io/badge/-快速开始-orange?style=for-the-badge&logo=rocket&logoColor=white&padding=8)](./quick-start.md)
 
 
 ## 🧩 插件生态系统
@@ -69,23 +70,18 @@ Powered by [hscsec](https://www.hscsec.cn)
 | **domain_seeker**       | 根据任务中的域名信息，进行子域名信息收集                                 | `info-collecting`, `collector`, `website`, `discovery`, `domain`, `DNS`, `amass` |
 | **nuclei_reactor**      | 根据任务中的URL信息，使用Nuclei扫描器进行漏洞检测                        | `vulnerability`, `detection`, `nuclei`, `exploit`, `CVE`             |
 
-* 更多社区插件: 插件商店建设中...
+* 更多社区插件: 建设中...
 
 
 
 
 ## 🌱 欢迎贡献插件
 
-我们鼓励开发者参与插件生态建设：
-1. **提交插件**：将你的插件代码提交到我们的插件市场
-2. **插件审核**：经过审核后，优质插件将被纳入官方插件库
-3. **社区奖励**：贡献者将获得专属荣誉标识和社区积分
+我们鼓励开发者参与插件生态建设：  
+1. **提交插件**：将你的插件代码提交到我们的插件市场  
+2. **插件审核**：经过审核后，优质插件将被纳入官方插件库  
+3. **社区奖励**：贡献者将获得专属荣誉标识和社区积分  
 
-
-## 📢 温馨提示
-
-- **插件编写指南**：详细的插件开发Wiki将在近期发布，敬请期待！
-- **插件反馈**：如果你对现有插件有任何建议或发现问题，欢迎提交[Issue](https://github.com/diamond-shovel/diamond-shovel/issues)
 
 ## 💡 核心文档
 
@@ -165,6 +161,7 @@ Shovel 项目的核心功能集中在 `shovel_core` 中。用户可以通过编�
 如果 SHOVEL 让您的安全工作更高效，请给我们点亮小星星！这是对我们最大的鼓励~
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/diamond-shovel/diamond-shovel?style=social)](https://github.com/diamond-shovel/diamond-shovel)
+
 
 ---
 📌 法律声明：本工具仅限合法授权测试使用，开发者不对滥用行为负责<br> 
